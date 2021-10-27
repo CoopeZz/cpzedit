@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>registerPage</title>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <link href="../static/css/uicons-solid-straight.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/register.css" th:href="@{css/register.css}">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <form class="container-fluid justify-content-end mid">
+        <a th:if="${loginStatus==0}" th:href="'/register'"> <button type="button" class="btn btn-secondary btn-sm">Register</button> </a>
+        <a th:if="${loginStatus==0}" th:href="'/login'"> <button type="button" class="btn btn-secondary btn-sm">Login</button> </a>
+        <a th:if="${loginStatus==1}" th:href="'/logout'"> <button type="button" class="btn btn-secondary btn-sm">Logout</button> </a>
+        <a th:if="${loginStatus==1}" th:href="'/create'"><button type="button" class="btn btn-secondary btn-sm">Create Post</button> </a>
+        <a th:if="${modStatus==1}" th:href="'/modpanel'"><button type="button" class="btn btn-secondary btn-sm">Moderator Panel</button> </a>
+    </form>
+</nav>
+<div>
+</div>
+<h1>REGISTER</h1>
+<form th:action="@{/register}" method="post" class="regform">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label"></label>
+        <input type="text" name="login" placeholder="Nickname" class="form-control" id="exampleInputEmail1">
+        <div></div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"></label>
+        <input type="password" name="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+        <div id="emailHelp" class="form-text">Your password must be 8-20 characters long, contain letters and numbers.</div></div>
+    <div><button type="submit" class="btn btn-primary">Register</button></div>
+</form>
+</body>
+</html>

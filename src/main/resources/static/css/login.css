@@ -1,0 +1,40 @@
+body {
+    background-image: url("../graphics/backgrounds/bcg.jpg");
+    background-repeat: repeat;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 700px;
+    color: azure;
+    text-align: center;
+}
+
+h1 {
+    background-color: #21252a
+}
+
+.navbar {
+    width: 100%
+}
+
+.btn {
+    margin: 5px 5px;
+}
+
+.logform{
+    margin: 0 auto;
+    padding: 50% 50px;
+}
+
+.form-label, .form-text {
+    float: left;
+    color: white;
+}
+
+.btn-primary {
+    text-align: center;
+    margin: 15px 50px;
+}
+
+.mid {
+    width: auto;
+}
